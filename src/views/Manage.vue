@@ -1,0 +1,116 @@
+<template>
+    <p class="text-base font-light text-[#4E4E4E]">Settings / Manage Account</p>
+    <h1 class="mt-5 text-3xl font-black color-[#444444] leading-9">
+        Settings
+
+    </h1>
+
+    <div class="mx-14 mt-20 ">
+        <div class="flex justify-center items-center  ">
+            <!-- <ul class="">
+                <li class=" text-base font-normal">Profile</li>
+                <li class=" text-base font-normal">Manage Account</li>
+                <li class=" text-base font-normal ">Business Profile</li>
+                <li class="text-base font-normal bg-[#0A244F] text-white rounded-lg">Team</li>
+                <li class=" text-base font-normal">Security</li>
+                <li class=" text-base font-normal">Refer</li>
+            </ul> -->
+
+            <ul class="flex items-center">
+                <li class="px-6 py-2.5">
+                    <a class=" text-base font-normal text-[#444444] " href="#">
+                        Profile
+                    </a>
+                </li>
+                <li class="px-6 py-2.5">
+                    <a class="text-base font-normal text-[#444444]" href="#">
+                        Manage Account
+                    </a>
+                </li>
+                <li class="px-6 py-2.5">
+                    <a class="text-base font-normal text-[#444444]" href="#">
+                        Business Profile
+                    </a>
+                </li>
+                <li class="px-6 py-2.5  bg-[#0A244F] text-white rounded-lg">
+                    <a class="" href="#">
+                        Team
+                    </a>
+                </li>
+                <li class="px-6 py-2.5">
+                    <a class=" text-base font-normal text-[#444444]" href="#">
+                        Security
+                    </a>
+                </li>
+                <li class="px-6 py-2.5">
+                    <a class=" " href="#">
+                        Refer
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="mt-12  w-full border border-red-200 rounded-lg shadow">
+        <div class="p-12">
+            <div class="flex justify-between">
+                <h1 class="font-medium text-3xl text-[#444444] leading-9">Manage Roles</h1>
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M14.7098 7.29C14.6169 7.19627 14.5063 7.12188 14.3844 7.07111C14.2626 7.02034 14.1318 6.9942 13.9998 6.9942C13.8678 6.9942 13.7371 7.02034 13.6153 7.07111C13.4934 7.12188 13.3828 7.19627 13.2898 7.29L10.9998 9.59L8.70984 7.29C8.52153 7.1017 8.26614 6.99591 7.99984 6.99591C7.73353 6.99591 7.47814 7.1017 7.28983 7.29C7.10153 7.47831 6.99574 7.7337 6.99574 8C6.99574 8.2663 7.10153 8.5217 7.28983 8.71L9.58984 11L7.28983 13.29C7.19611 13.383 7.12171 13.4936 7.07094 13.6154C7.02017 13.7373 6.99404 13.868 6.99404 14C6.99404 14.132 7.02017 14.2627 7.07094 14.3846C7.12171 14.5064 7.19611 14.617 7.28983 14.71C7.3828 14.8037 7.4934 14.8781 7.61526 14.9289C7.73712 14.9797 7.86782 15.0058 7.99984 15.0058C8.13185 15.0058 8.26255 14.9797 8.38441 14.9289C8.50627 14.8781 8.61687 14.8037 8.70984 14.71L10.9998 12.41L13.2898 14.71C13.3828 14.8037 13.4934 14.8781 13.6153 14.9289C13.7371 14.9797 13.8678 15.0058 13.9998 15.0058C14.1318 15.0058 14.2626 14.9797 14.3844 14.9289C14.5063 14.8781 14.6169 14.8037 14.7098 14.71C14.8036 14.617 14.878 14.5064 14.9287 14.3846C14.9795 14.2627 15.0056 14.132 15.0056 14C15.0056 13.868 14.9795 13.7373 14.9287 13.6154C14.878 13.4936 14.8036 13.383 14.7098 13.29L12.4098 11L14.7098 8.71C14.8036 8.61704 14.878 8.50644 14.9287 8.38458C14.9795 8.26272 15.0056 8.13201 15.0056 8C15.0056 7.86799 14.9795 7.73729 14.9287 7.61543C14.878 7.49357 14.8036 7.38297 14.7098 7.29ZM18.0698 3.93C17.1474 2.9749 16.0439 2.21308 14.8239 1.68899C13.6038 1.1649 12.2916 0.889037 10.9638 0.877499C9.63605 0.86596 8.31926 1.11898 7.09029 1.62179C5.86133 2.1246 4.74481 2.86713 3.80589 3.80605C2.86696 4.74498 2.12443 5.8615 1.62162 7.09046C1.11881 8.31943 0.865793 9.63622 0.877331 10.964C0.888869 12.2918 1.16473 13.604 1.68882 14.824C2.21291 16.0441 2.97473 17.1475 3.92984 18.07C4.8523 19.0251 5.95575 19.7869 7.17579 20.311C8.39583 20.8351 9.70803 21.111 11.0358 21.1225C12.3636 21.134 13.6804 20.881 14.9094 20.3782C16.1383 19.8754 17.2549 19.1329 18.1938 18.194C19.1327 17.255 19.8752 16.1385 20.3781 14.9095C20.8809 13.6806 21.1339 12.3638 21.1223 11.036C21.1108 9.7082 20.8349 8.396 20.3109 7.17596C19.7868 5.95592 19.0249 4.85247 18.0698 3.93ZM16.6598 16.66C15.3519 17.9694 13.6304 18.7848 11.7886 18.9673C9.94688 19.1498 8.09884 18.6881 6.55936 17.6608C5.01987 16.6335 3.88419 15.1042 3.34581 13.3335C2.80742 11.5628 2.89964 9.66014 3.60675 7.94979C4.31386 6.23943 5.59211 4.82715 7.22373 3.95356C8.85534 3.07998 10.7394 2.79913 12.5548 3.15888C14.3703 3.51862 16.0049 4.49669 17.1801 5.92646C18.3553 7.35623 18.9984 9.14924 18.9998 11C19.0034 12.0513 18.7984 13.0928 18.3968 14.0644C17.9951 15.0359 17.4047 15.9182 16.6598 16.66Z"
+                        fill="#8B8B8B" />
+                </svg>
+
+            </div>
+
+            <div class="border-t-2 border-red w-full mt-8  ">
+
+            </div>
+
+            <div class="mt-8 grid grid-cols-4">
+                <div class="col-span-1 border-r border-r-[#8B8B8B;]">
+                    <ul class="w-[83%]">
+                        <li class="pl-3 py-1 bg-[#023C98] text-white text-xs font-normal">DEFAULT ROLES</li>
+                        <li class="mx-3 my-5 font-normal text-base text-[#8B8B8B]">Admin</li>
+                        <li class="mx-3 my-5 font-normal text-base text-[#8B8B8B]">Assistant</li>
+                        <li class="mx-3 my-5 font-normal text-base text-[#8B8B8B]">Auditor</li>
+                        <li class="mx-3 my-7 font-normal text-base text-[#444444]">Custom Roles</li>
+                        <li class="p-3 bg-[#FFF0EC] text-base font-bold text-[#E4572E]">Head Accountant</li>
+                        <li class="mx-3 my-5 font-medium text-xs text-[#555555]">You can create your own custom roles,
+                            and choose exactly what team members can see and do.
+                        </li>
+
+                    </ul>
+                    <button class="flex create p-3 w-[83%] bg-[#E4572E] text-sm font-medium text-white">
+                        <svg class="mr-2 my-0.5" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M15 7H9V1C9 0.734784 8.89464 0.48043 8.70711 0.292893C8.51957 0.105357 8.26522 0 8 0C7.73478 0 7.48043 0.105357 7.29289 0.292893C7.10536 0.48043 7 0.734784 7 1V7H1C0.734784 7 0.48043 7.10536 0.292893 7.29289C0.105357 7.48043 0 7.73478 0 8C0 8.26522 0.105357 8.51957 0.292893 8.70711C0.48043 8.89464 0.734784 9 1 9H7V15C7 15.2652 7.10536 15.5196 7.29289 15.7071C7.48043 15.8946 7.73478 16 8 16C8.26522 16 8.51957 15.8946 8.70711 15.7071C8.89464 15.5196 9 15.2652 9 15V9H15C15.2652 9 15.5196 8.89464 15.7071 8.70711C15.8946 8.51957 16 8.26522 16 8C16 7.73478 15.8946 7.48043 15.7071 7.29289C15.5196 7.10536 15.2652 7 15 7Z"
+                                fill="white" />
+                        </svg>
+
+                        Create New Role
+                    </button>
+                </div>
+                <div class="col-span-3 ml-3 ">
+                    <div class="flex justify-between">
+                        <h1 class="font-normal text-3xl text-[#E4572E]">Head Account</h1>
+                        <button class="flex w-24 h-8 p-3 bg-[#E4572E] text-base font-medium text-white">
+
+                            Edit
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</template>
+
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+.create {
+    font-family: 'Inter', 'Roboto';
+}
+</style>
