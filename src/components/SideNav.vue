@@ -3,30 +3,31 @@
 </script>
 
 <template>
-  <div class="flex w-screen">
-    <section class=" h-screen w-1/5">
-      <div class="w-full h-36 theme-color flex justify-center items-center">
-        <img class="w-44 h-18" src="../assets/eazipay.svg" alt="">
+  <div class="sidenav">
+    <div class="w-full h-36 theme-color flex justify-center items-center">
+      <img class="w-44 h-18" src="../assets/eazipay.svg" alt="">
+    </div>
+    <div class="w-full h-20  border-b border-r border-[#E1E2E5] " :class="{ hidden: home }">
+
+      <div class=" py-7 pl-9 flex justify-between w-40 ">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M19.66 8.24999L10.66 0.249986C10.4775 0.0896664 10.2429 0.00125122 10 0.00125122C9.75709 0.00125122 9.52249 0.0896664 9.34 0.249986L0.339997 8.24999C0.187033 8.3853 0.0791648 8.5642 0.0308962 8.76264C-0.0173724 8.96107 -0.0037274 9.16953 0.0699968 9.35999C0.142515 9.54792 0.270102 9.70958 0.436046 9.82377C0.601991 9.93797 0.798556 9.99939 0.999997 9.99999H2V19C2 19.2652 2.10535 19.5196 2.29289 19.7071C2.48043 19.8946 2.73478 20 3 20H17C17.2652 20 17.5196 19.8946 17.7071 19.7071C17.8946 19.5196 18 19.2652 18 19V9.99999H19C19.2014 9.99939 19.398 9.93797 19.5639 9.82377C19.7299 9.70958 19.8575 9.54792 19.93 9.35999C20.0037 9.16953 20.0174 8.96107 19.9691 8.76264C19.9208 8.5642 19.813 8.3853 19.66 8.24999V8.24999ZM11 18H9V15C9 14.7348 9.10535 14.4804 9.29289 14.2929C9.48043 14.1053 9.73478 14 10 14C10.2652 14 10.5196 14.1053 10.7071 14.2929C10.8946 14.4804 11 14.7348 11 15V18ZM16 18H13V15C13 14.2043 12.6839 13.4413 12.1213 12.8787C11.5587 12.3161 10.7956 12 10 12C9.20435 12 8.44129 12.3161 7.87868 12.8787C7.31607 13.4413 7 14.2043 7 15V18H4V9.99999H16V18ZM3.63 7.99999L10 2.33999L16.37 7.99999H3.63Z"
+            fill="#E4572E" />
+        </svg>
+        <h5 class="font-bold text-[#E4572E]">
+
+          DASHBOARD
+        </h5>
       </div>
-      <div class="w-full h-20 border-b border-r border-[#E1E2E5]">
 
-        <div class="py-7 pl-9 flex justify-between w-40">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M19.66 8.24999L10.66 0.249986C10.4775 0.0896664 10.2429 0.00125122 10 0.00125122C9.75709 0.00125122 9.52249 0.0896664 9.34 0.249986L0.339997 8.24999C0.187033 8.3853 0.0791648 8.5642 0.0308962 8.76264C-0.0173724 8.96107 -0.0037274 9.16953 0.0699968 9.35999C0.142515 9.54792 0.270102 9.70958 0.436046 9.82377C0.601991 9.93797 0.798556 9.99939 0.999997 9.99999H2V19C2 19.2652 2.10535 19.5196 2.29289 19.7071C2.48043 19.8946 2.73478 20 3 20H17C17.2652 20 17.5196 19.8946 17.7071 19.7071C17.8946 19.5196 18 19.2652 18 19V9.99999H19C19.2014 9.99939 19.398 9.93797 19.5639 9.82377C19.7299 9.70958 19.8575 9.54792 19.93 9.35999C20.0037 9.16953 20.0174 8.96107 19.9691 8.76264C19.9208 8.5642 19.813 8.3853 19.66 8.24999V8.24999ZM11 18H9V15C9 14.7348 9.10535 14.4804 9.29289 14.2929C9.48043 14.1053 9.73478 14 10 14C10.2652 14 10.5196 14.1053 10.7071 14.2929C10.8946 14.4804 11 14.7348 11 15V18ZM16 18H13V15C13 14.2043 12.6839 13.4413 12.1213 12.8787C11.5587 12.3161 10.7956 12 10 12C9.20435 12 8.44129 12.3161 7.87868 12.8787C7.31607 13.4413 7 14.2043 7 15V18H4V9.99999H16V18ZM3.63 7.99999L10 2.33999L16.37 7.99999H3.63Z"
-              fill="#E4572E" />
-          </svg>
-          <h5 class="font-bold text-[#E4572E]">
+    </div>
+  </div>
 
-            DASHBOARD
-          </h5>
-        </div>
-
-      </div>
-    </section>
-
-    <section class=" h-20 relative w-4/5 shadow px-10 py-3 ">
-      <nav class="flex">
+  <div class="main">
+    <section class=" shadow ">
+      <!-- <div class="  "> -->
+      <nav class="flex w-full h-20 px-10 py-3">
 
         <div class=" flex justify-between w-3/4">
           <a href="#">
@@ -86,16 +87,52 @@
         </div>
 
       </nav>
+      <!-- </div> -->
 
-      <section>
+      <section class="px-10 py-3 bg-[#F9FAFC] ">
         <slot></slot>
       </section>
     </section>
-
-
   </div>
 </template>
 
-<style scoped>
+<script setup>
+import { ref, onMounted, computed } from 'vue';
+import { useRoute } from 'vue-router'
 
+const route = useRoute()
+const home = computed(() => {
+
+  return route.name !== 'home'
+})
+
+onMounted(() => {
+  console.log(route.$route);
+})
+
+
+</script>
+
+<style scoped>
+.sidenav {
+  height: 100%;
+  width: 272px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+}
+
+
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 272px;
+  /* Same as the width of the sidenav */
+
+}
 </style>

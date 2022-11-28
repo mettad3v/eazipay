@@ -26,7 +26,7 @@
         </div>
 
         <div>
-            <button
+            <button @click="menu"
                 class="grow h-full border rounded-lg w-32 border-[#8B8B8B] grow flex items-center justify-between px-5">
 
                 <div class="flex">
@@ -43,10 +43,53 @@
 
 
             </button>
+
+            <div class="w-[182px] h-[186px] absolute -ml-14 z-10 bg-white history-shadow" :class="{ hidden: clicked }">
+                <ul>
+                    <li class=" px-[12px] hover:bg-[#023C98] hover:text-white text-[#444444] py-[2px] mt-2">
+                        <input class="mr-3  bg-[#19A301]" type="checkbox" name="" id="">
+                        <span class="text-sm font-light mt-20">All</span>
+                    </li>
+                    <li class=" px-[12px] hover:bg-[#023C98] hover:text-white text-[#444444] py-[3px]"><input
+                            class="mr-3  bg-[#19A301]" type="checkbox" name="" id=""><span
+                            class="text-sm font-light mt-20">A - Z</span></li>
+                    <li class=" px-[12px] hover:bg-[#023C98] hover:text-white text-[#444444] py-[3px]"><input
+                            class="mr-3  bg-[#19A301]" type="checkbox" name="" id=""><span
+                            class="text-sm font-light mt-20">Z- A</span></li>
+                    <li class=" px-[12px] hover:bg-[#023C98] hover:text-white text-[#444444] py-[3px]"><input
+                            class="mr-3  bg-[#19A301]" type="checkbox" name="" id=""><span
+                            class="text-sm font-light mt-20">Highest to Least Paid</span></li>
+                    <li class=" px-[12px] hover:bg-[#023C98] hover:text-white text-[#444444] py-[3px]"><input
+                            class="mr-3  bg-[#19A301]" type="checkbox" name="" id=""><span
+                            class="text-sm font-light mt-20">Least to Highest Paid</span></li>
+                    <li @click="submenu"
+                        class="cursor-pointer px-[12px] hover:bg-[#023C98] hover:text-white text-[#444444] py-[3px]">
+                        <span class="text-sm font-light mt-20">Payment Status</span>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="h-[82px] w-[182px] bg-white z-10 absolute mt-[160px] -ml-[238px]"
+                :class="{ hidden: subMenuClicked }">
+                <ul>
+                    <li class=" px-[12px] hover:bg-[#023C98] hover:text-white text-[#444444] py-[2px] ">
+                        <input class="mr-3  bg-[#19A301]" type="checkbox" name="" id="">
+                        <span class="text-sm font-light ">Paid</span>
+                    </li>
+                    <li class=" px-[12px] hover:bg-[#023C98] hover:text-white text-[#444444] py-[2px]"><input
+                            class="mr-3  bg-[#19A301]" type="checkbox" name="" id=""><span
+                            class="text-sm font-light ">Pending</span></li>
+                    <li class=" px-[12px] hover:bg-[#023C98] hover:text-white text-[#444444] py-[2px]"><input
+                            class="mr-3  bg-[#19A301]" type="checkbox" name="" id=""><span
+                            class="text-sm font-light ">Failed</span></li>
+
+
+                </ul>
+            </div>
         </div>
 
         <div>
-            <button class="px-5 bg-[#0A244F] text-white h-full rounded-lg ">
+            <button class="px-5 bg-[#0A244F] text-white w-40 h-full rounded-lg ">
                 <span class="text-base">Run Payroll</span>
             </button>
         </div>
@@ -135,26 +178,7 @@
 
     <p class="mt-10 flex flex-row-reverse font-light text-sm">1 - 50 of 210</p>
     <div class="  overflow-y-scroll h-105">
-        <!--    <div class="grid grid-cols-6 row">
-            <div class="border-2 border-[#0A244F] text-center rounded-tl-lg">
-                lorem
-            </div>
-            <div class="border-2 border-r-none border-[#0A244F] text-center ">
-                lorem
-            </div>
-            <div class="border-2 border-[#0A244F] text-center ">
-                lorem
-            </div>
-            <div class="border-2 border-[#0A244F] text-center ">
-                lorem
-            </div>
-            <div class="border-2 border-[#0A244F] text-center ">
-                lorem
-            </div>
-            <div class="border-2 border-[#0A244F] text-center rounded-tr-lg">
-                lorem
-            </div>
-        </div> -->
+
         <table class="table-fixed w-full">
             <thead class="text-center drop">
                 <tr class="">
@@ -230,6 +254,18 @@
 <script setup>
 import { ref } from 'vue';
 
+const clicked = ref(true)
+const subMenuClicked = ref(true)
+
+const menu = () => {
+    clicked.value = !clicked.value
+
+}
+
+const submenu = () => {
+    subMenuClicked.value = !subMenuClicked.value
+
+}
 const tableData = ref([
     {
         fname: {
@@ -387,6 +423,10 @@ const getColor = (color) => {
 </script>
 
 <style scoped>
+.history-shadow {
+    filter: drop-shadow(2px 4px 10px rgba(0, 0, 0, 0.15))
+}
+
 .drop {
     filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.15));
 }
@@ -429,6 +469,7 @@ thead tr th {
 
 thead tr th:first-child {
     border-radius: 10px 0 0 0;
+
 }
 
 thead tr th:last-child {

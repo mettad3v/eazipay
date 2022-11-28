@@ -1,6 +1,6 @@
 <template>
-    <p class="text-3xl font-bold">Welcome Abasiama</p>
-    <p class="text-base font-medium mt-1">Pay and manage your employee in minutes</p>
+    <p class="text-3xl font-semibold">Welcome Abasiama</p>
+    <p class="text-base font-normal mt-1">Pay and manage your employee in minutes</p>
 
     <div class="flex  w-full mt-12 h-80">
         <div class="w-3/4">
@@ -104,7 +104,7 @@
 
             </div>
 
-            <div class="w-48 h-34 ml-10  px-8 py-8">
+            <div class="w-48  ml-10 bg-white px-8 py-8">
                 <p class="font-medium text-base text-[#5F5F5F]">Total Employee</p>
                 <p class="text-3xl text-left mt-1 font-black text-[#444444]">50</p>
                 <div class="w-full h-2 flex mt-2">
@@ -138,7 +138,8 @@
                 </div>
 
                 <div>
-                    <button class="grow w-32  border border-[#8B8B8B] grow px-1 h-6 flex items-center">
+                    <button @click="menu"
+                        class="grow w-[136px]  border border-[#8B8B8B] grow px-1 h-6 flex items-center">
 
                         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -151,6 +152,7 @@
 
                     </button>
                 </div>
+
 
                 <div class="font-medium py-1 text-sm text-[#0A244F] flex">Inflow/Outflow
 
@@ -165,6 +167,29 @@
                 </div>
 
 
+            </div>
+            <div class="w-[136px] h-[110px] bg-white absolute ml-[430px] -mt-3 profile-shadow"
+                :class="{ hidden: clicked }">
+                <ul>
+                    <li
+                        class="py-[8px]  hover:bg-[#023C98] cursor-pointer hover:text-white  px-[24px] text-[14px] font-light flex justify-between">
+                        Custom
+                        <svg class="my-1" width="8" height="12" viewBox="0 0 8 12" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M1.17 0.999998C0.983753 1.18736 0.879211 1.44081 0.879211 1.705C0.879211 1.96918 0.983753 2.22264 1.17 2.41L4.71 6L1.17 9.54C0.983753 9.72736 0.879211 9.98081 0.879211 10.245C0.879211 10.5092 0.983753 10.7626 1.17 10.95C1.26297 11.0437 1.37357 11.1181 1.49543 11.1689C1.61729 11.2197 1.74799 11.2458 1.88 11.2458C2.01202 11.2458 2.14272 11.2197 2.26458 11.1689C2.38644 11.1181 2.49704 11.0437 2.59 10.95L6.83 6.71C6.92373 6.61703 6.99813 6.50643 7.04889 6.38457C7.09966 6.26272 7.1258 6.13201 7.1258 6C7.1258 5.86799 7.09966 5.73728 7.04889 5.61542C6.99813 5.49356 6.92373 5.38296 6.83 5.29L2.59 0.999998C2.49704 0.90627 2.38644 0.831876 2.26458 0.781107C2.14272 0.730338 2.01202 0.704199 1.88 0.704199C1.74799 0.704199 1.61729 0.730338 1.49543 0.781107C1.37357 0.831876 1.26297 0.90627 1.17 0.999998Z"
+                                fill="#878787" />
+                        </svg>
+                    </li>
+                    <li
+                        class="py-[8px]  hover:bg-[#023C98] cursor-pointer hover:text-white  px-[24px] text-[14px] font-light flex justify-between">
+                        Month
+                    </li>
+                    <li
+                        class="py-[8px]  hover:bg-[#023C98]  cursor-pointer hover:text-white  px-[24px] text-[14px] font-light flex justify-between">
+                        Year
+                    </li>
+                </ul>
             </div>
 
             <div class="mt-8">
@@ -304,7 +329,7 @@
                                 <p class="my-2 ml-2 text-sm font-normal text-[#444444]">{{ d.details }}</p>
                             </div>
                             <div class="ml-5">
-                                <p class="my-2 ml-2 text-sm font-normal text-[#444444]">{{ d.date }}</p>
+                                <p class="my-2 ml-6 text-sm font-normal text-[#444444]">{{ d.date }}</p>
                             </div>
                             <div class="ml-24">
                                 <p class="my-2 ml-2 text-sm font-normal text-[#444444]">{{ d.time }}</p>
@@ -329,11 +354,20 @@ td:first-child {
 td:last-child {
     border-radius: 0 10px 10px 0 !important;
 }
+
+.profile-shadow {
+    box-shadow: -4px 2px 10px rgba(0, 0, 0, 0.15)
+}
 </style>
 
 <script setup>
 import { ref } from 'vue';
+const clicked = ref(true)
 
+const menu = () => {
+    clicked.value = !clicked.value
+
+}
 const tableData = ref([
     {
         name: 'Adewale Ajasin',
