@@ -1,7 +1,6 @@
 <template>
     <p class="text-3xl font-semibold">Welcome Abasiama</p>
     <p class="text-base font-normal mt-1">Pay and manage your employee in minutes</p>
-
     <div class="flex  w-full mt-12 h-80">
         <div class="w-3/4">
             <div class="h-34 theme-color rounded-2xl">
@@ -24,7 +23,8 @@
 
             <div class="w-full mt-12 flex justify-between items-center gap-2.5">
                 <div class="w-40 h-32 bg-[#023C98] rounded-2xl ">
-                    <a href="">
+                    <router-link to="/profile">
+
                         <div class="flex justify-center items-center mt-5">
                             <svg width="49" height="49" viewBox="0 0 49 49" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -36,7 +36,7 @@
 
                         </div>
                         <p class="font-medium text-base mt-2 text-white text-center">Add Employee</p>
-                    </a>
+                    </router-link>
                 </div>
                 <div class="w-40 h-32 bg-[#023C98] rounded-2xl">
                     <router-link to="/history">
@@ -52,10 +52,11 @@
 
                         </div>
                         <p class="font-medium text-base mt-2 text-white text-center">Run Payroll</p>
-                    </router-link>>
+                    </router-link>
                 </div>
                 <div class="w-40 h-32 bg-[#023C98] rounded-2xl">
-                    <a href="">
+                    <router-link to="/manage">
+
                         <div class="flex justify-center items-center mt-5">
                             <svg width="49" height="49" viewBox="0 0 49 49" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -65,13 +66,13 @@
                                     fill="white" fill-opacity="0.65" />
                             </svg>
 
-
                         </div>
                         <p class="font-medium text-base mt-2 text-white text-center">Quick Loan</p>
-                    </a>
+                    </router-link>
                 </div>
                 <div class="w-40 h-32 bg-[#023C98] rounded-2xl">
                     <a href="">
+
                         <div class="flex justify-center items-center mt-5">
                             <svg width="49" height="49" viewBox="0 0 49 49" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -80,7 +81,6 @@
                                     d="M33.8333 24.5H24.5V15.1667C24.5 14.3667 23.9667 13.8333 23.1667 13.8333C16.5 13.8333 11.1667 19.1667 11.1667 25.8333C11.1667 32.5 16.5 37.8333 23.1667 37.8333C29.8333 37.8333 35.1667 32.5 35.1667 25.8333C35.1667 25.0333 34.6333 24.5 33.8333 24.5ZM24.5 35.0333C19.4333 35.8333 14.6333 32.2333 13.9667 27.1667C13.1667 22.1 16.7667 17.3 21.8333 16.6333V25.8333C21.8333 26.6333 22.3667 27.1667 23.1667 27.1667H32.3667C31.8333 31.3 28.6333 34.5 24.5 35.0333ZM28.5 11.1667C27.7 11.1667 27.1667 11.7 27.1667 12.5V20.5C27.1667 21.3 27.7 21.8333 28.5 21.8333H36.5C37.3 21.8333 37.8333 21.3 37.8333 20.5C37.8333 15.3 33.7 11.1667 28.5 11.1667ZM29.8333 19.1667V13.9667C32.5 14.5 34.5 16.5 35.0333 19.1667H29.8333Z"
                                     fill="white" fill-opacity="0.65" />
                             </svg>
-
 
                         </div>
                         <p class="font-medium text-base mt-2 text-white text-center">Inventory</p>
@@ -361,6 +361,7 @@ td:last-child {
 </style>
 
 <script setup>
+import Chart from '../components/Chart.vue'
 import { ref } from 'vue';
 const clicked = ref(true)
 
@@ -371,7 +372,7 @@ const menu = () => {
 const tableData = ref([
     {
         name: 'Adewale Ajasin',
-        avatar: '/src/assets/table1-frame-1.png',
+        avatar: new URL('../assets/table1-frame-1.png', import.meta.url).href,
         details: 'Took loan from eazipay.',
         date: 'August 15, 2022',
         time: '10:35pm',
@@ -379,7 +380,7 @@ const tableData = ref([
     },
     {
         name: 'Badmus Kemis',
-        avatar: '/src/assets/table2-frame-1.png',
+        avatar: new URL('../assets/table2-frame-1.png', import.meta.url).href,
         details: 'Paid leave allowance..',
         date: 'August 13, 2022',
         time: '9:35am',
@@ -387,7 +388,7 @@ const tableData = ref([
     },
     {
         name: 'Dara Ventures',
-        avatar: '/src/assets/table3-frame-1.png',
+        avatar: new URL('../assets/table3-frame-1.png', import.meta.url).href,
         details: 'Sent invoice and reciept',
         date: 'August 12, 2022',
         time: '10:39am',
@@ -395,7 +396,7 @@ const tableData = ref([
     },
     {
         name: 'Dara Ventures',
-        avatar: '/src/assets/table3-frame-1.png',
+        avatar: new URL('../assets/table3-frame-1.png', import.meta.url).href,
         details: 'Sent invoice and reciept',
         date: 'August 12, 2022',
         time: '10:39am',
@@ -403,7 +404,7 @@ const tableData = ref([
     },
     {
         name: 'Dara Ventures',
-        avatar: '/src/assets/table3-frame-1.png',
+        avatar: new URL('../assets/table3-frame-1.png', import.meta.url).href,
         details: 'Sent invoice and reciept',
         date: 'August 12, 2022',
         time: '10:39am',
@@ -411,7 +412,7 @@ const tableData = ref([
     },
     {
         name: 'Dara Ventures',
-        avatar: '/src/assets/table3-frame-1.png',
+        avatar: new URL('../assets/table3-frame-1.png', import.meta.url).href,
         details: 'Sent invoice and reciept',
         date: 'August 12, 2022',
         time: '10:39am',

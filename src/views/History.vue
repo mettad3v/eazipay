@@ -270,7 +270,7 @@ const tableData = ref([
     {
         fname: {
             name: 'Wasiu',
-            avatar: '/src/assets/table1-frame-1.png'
+            avatar: new URL('../assets/wasiu.png', import.meta.url).href
         },
         lname: 'Tiamiyu',
         gp: 'N356,015.94',
@@ -281,7 +281,7 @@ const tableData = ref([
     {
         fname: {
             name: 'Oyinkosola',
-            avatar: '/src/assets/oyin.png'
+            avatar: new URL('../assets/oyin.png', import.meta.url).href
         },
         lname: 'Oshokoya',
         gp: 'N356,015.94',
@@ -292,7 +292,7 @@ const tableData = ref([
     {
         fname: {
             name: 'Toyin',
-            avatar: '/src/assets/toyin.png'
+            avatar: new URL('../assets/toyin.png', import.meta.url).href
         },
         lname: 'Faleke',
         gp: 'N356,015.94',
@@ -303,7 +303,7 @@ const tableData = ref([
     {
         fname: {
             name: 'Ada',
-            avatar: '/src/assets/ada.png'
+            avatar: new URL('../assets/ada.png', import.meta.url).href
         },
         lname: 'Ofuomalu',
         gp: 'N356,015.94',
@@ -314,7 +314,7 @@ const tableData = ref([
     {
         fname: {
             name: 'Edward',
-            avatar: '/src/assets/ed.png'
+            avatar: new URL('../assets/ed.png', import.meta.url).href
         },
         lname: 'Madaki',
         gp: 'N356,015.94',
@@ -325,7 +325,7 @@ const tableData = ref([
     {
         fname: {
             name: 'Inoscent',
-            avatar: '/src/assets/ino.png'
+            avatar: new URL('../assets/ino.png', import.meta.url).href
         },
         lname: 'Makanaki',
         gp: 'N356,015.94',
@@ -336,7 +336,7 @@ const tableData = ref([
     {
         fname: {
             name: 'Rashidat',
-            avatar: '/src/assets/rashid.png'
+            avatar: new URL('../assets/rashid.png', import.meta.url).href
         },
         lname: 'Oluwasegun',
         gp: 'N356,015.94',
@@ -347,7 +347,7 @@ const tableData = ref([
     {
         fname: {
             name: 'Tunde',
-            avatar: '/src/assets/tunde.png'
+            avatar: new URL('../assets/tunde.png', import.meta.url).href
         },
         lname: 'Kelani',
         gp: 'N356,015.94',
@@ -358,7 +358,7 @@ const tableData = ref([
     {
         fname: {
             name: 'Efosa',
-            avatar: '/src/assets/efosa.png'
+            avatar: new URL('../assets/efosa.png', import.meta.url).href
         },
         lname: 'The Boss',
         gp: 'N356,015.94',
@@ -369,7 +369,7 @@ const tableData = ref([
     {
         fname: {
             name: 'Sandra',
-            avatar: '/src/assets/sandra.png'
+            avatar: new URL('../assets/sandra.png', import.meta.url).href
         },
         lname: 'Odinakachi',
         gp: 'N356,015.94',
@@ -380,7 +380,7 @@ const tableData = ref([
     {
         fname: {
             name: 'Efosa',
-            avatar: '/src/assets/efosa.png'
+            avatar: new URL('../assets/efosa.png', import.meta.url).href
         },
         lname: 'The Boss',
         gp: 'N356,015.94',
@@ -391,7 +391,7 @@ const tableData = ref([
     {
         fname: {
             name: 'Sandra',
-            avatar: '/src/assets/sandra.png'
+            avatar: new URL('../assets/sandra.png', import.meta.url).href
         },
         lname: 'Odinakachi',
         gp: 'N356,015.94',
